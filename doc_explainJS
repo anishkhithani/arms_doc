@@ -1,0 +1,186 @@
+ISIS function
+defining the game function
+
+
+defining variables
+defining variables that will be used in jquery
+defining Objects (by convnention those with cap letter[0] are objects)
+
+  function promptfornumber(message)
+    define a variable num which is established by doing the block of code:
+      launches a prompt where the input value is the "message", with a while function that determines that the input is an illegal number (isNAN - is Not-A-Number), return the number
+    So that in the game when you need to enter the qty of units you want this will occur and take your number and check to see if its a real number or not
+
+  function getRandomIntinRange(min,max)
+    gets a random number rounded down to the nearest integer between the given max and min+1
+
+  funtion createButtonForCity(city) *all jquery
+    creates a jquery variable $button
+    passes in the name of a city and creates an html button for it
+    first creates a jquery node for the button
+    gives it the html5 data attribute with city set equal to the param city passed through
+    adds text inside the button, "Travel here"
+    gives the button a class "btn"
+    So that in the game a button for each city is created.
+
+    function createButtonForItem(item)
+      creates a jquery variable for $buy
+      passes in the name of an item to create an html button
+      first creates a jquery node for <button>
+      gives it the html5 data attribute with the item set equal to the param item passed though
+      added text inside the button "buy"
+      adds class to teh button, btn
+
+        creats an event, when the buy button is clicked it will initiate a function:
+          creates an item variable set to which ever item button was clicked (not all buttons)
+          then places that item into the games > current city > item inventory array
+          prints which item is going in, and prints which item
+
+          calls the game.buyitem(item) function
+          calls teh game.refresh view function
+
+          returns the $buy value
+      So that in the game a buy button is created for each item in the item array so that you can click and buy and displays in your current city's inventory. 
+
+    function sample(items,numnerOFitems)
+      samples a set of items in an array, empty
+      variable item
+      do, create a variable num equal to a random number, rounded down, times the length of the item
+      item = items[num], which is an index of the items array which is not defined?
+      do this while, sample of items(the last index of the array item) is not equal to -1
+      push the item to the sampleofitems array(that item)
+      all while sampleofitems array length does not equal the number of total items
+      return the sample of items array
+
+    function printCities
+      sets the DOM elements for the cities in the game (html nodes)
+      adds the text to the city text, blank
+      adds city title text to the current city to the name
+
+      creates a loop for every city enterted to:
+        create table row, table data with class city span3, a button for the city with class span3
+
+      if the city is not current city
+        add a button with class btn-primary
+        and when you clicj this button the function, the data attr for this button will change to the city name
+
+        the game will change to the city you clicked on
+        game. roll die for bad thing?
+        game. refreshed
+
+      else the button text will change to "You are here, as in your current city"
+      and the button class will be change to btn-warning disabled (css)
+
+      the city text will change to the citys name in text
+      table row will append the city, city name
+      the row will append the data for the button?
+      _cities will be appended to the row
+    Creates the dom nodes for all teh cities, and enters it into a table with a city button. When you click the button you will go to the city, unless you're in that city and it'll tell you
+    the game will change to the city, or do the roll or die method (random) city
+
+    function printItems(currentcity)
+      will set the DOM elements for the current city's items
+      text added to _items blank
+
+      a loop, for k (the array of items in the items.currentcity)
+      items are the current city items, easy to ref from here
+      for every item in the array of items in the current city:
+        a row, an item data fied with class item span4, a button table data with class buttons span1,
+        and the value in a table data field with class value span1
+        created for each item in the array
+      button group is appended to the createbutton in the html for K item
+
+      item text is inserted for the item name?
+      the value text field is inserted into html for dollar sign + the current items price value
+
+      row is to append current city.items
+      row is also to append to value and button group?
+
+      _items which is a list of item array is to append the rows
+      So that in the game you have a printed list of items in your current city. 
+    
+    function printInventory
+      worth is otherwise stated as empty
+      sets the DOM node elements for the agents inventory
+      for every K item in the inventory it'll create table data
+      it'll create row
+      and table table for each item with class span 4 item
+      a button group with table data and class buttons span 2
+
+      if the current city items index (of the current item) is > 0
+      (meaning if in the current city of items you actually have inventory)
+      you have the options to:
+        sell - creates a sell button, with data item attr or K item
+        input Sell into the text field
+        and give it the btn class
+
+        when you click the button, the game will take that item out of your agent inventory
+
+        the game will run the sell item func
+        the game will refresh
+
+        and append the sell button to the group buttons
+
+        worth is equal to the value of your items
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
