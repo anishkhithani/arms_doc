@@ -123,6 +123,94 @@ defining Objects (by convnention those with cap letter[0] are objects)
 
         worth is equal to the value of your items
 
+        items are appended to your row, button group is appended to your row so now you can see current items and current button group
+
+    function printProfile
+      creating dom node elements for the agent profile
+      creates a dome node and inserts text for codename, agentname, rank, and money
+
+    function to create an item with a name, min price, max price, and an option to recalc price
+      min max prices run in the game for buying and selling
+
+    a function to randomly select the min/max price based on THIS item
+
+    an array of items with the min and max price (as relative to prev functions)
+      all items have a name, min price, and max price
+
+    a funtion for city, where a city is created and given a random number of items
+
+    an array of cities by city name. the function above gives each city item a random number of items to start off with
+
+    When a game starts you're thrown into a random city, with random items,
+    and a new agent is initialized
+
+    a function to refresh the view of the game for when things are changed
+    > print your items based on purchases and sales 
+    > print your cities based on location changes and updates
+    > print the agent profile
+
+    function to change city
+      earlier when a city was clicked, a changecity function was called on, this is the function
+      when this takes place, the console prints to try to change to the new city name
+      and current city is now updated to the new city
+      refresh view
+
+    function for badThing
+      a function to roll between 1 and 10 interger range for when bad things happen
+      1 out of every 10 turns has a bad thing happen
+      every turn counts as a roll for which a random number is chosen, if its 1 a bad thing happens and bad things is called. otherwise you keep going
+
+
+      function for when an item is purchased
+        when you click an item a prompt for how many you want appears, this amount is set to qty
+        valid number kicks in here (from before)
+
+        amount is equal to the item price * qty
+        if agent cannot afford (based on agents current money) the prompt for you cant afford (amount displayed)
+
+        otherwise a prompt is displayed to confirm the purchase
+
+        item is purchased, and the buy item function is called so that the item is now in inventory
+
+      function for selling items
+        value is equal to the inventorys item current price * the inventory qty
+
+        when an inventory item is clicked to sell, is asked how many you want to sell and to enter a number great than 1
+
+        an if statement that checks to make sure what you're selling you have enough of to sell
+        ie sellingqty <= inventory of item
+        it'll prompt you if so, otherwise it will sell
+        the sell item inventory item function is called and the item is removed from inventory and the earn money function is called so that you bank reflects that
+
+      function for bad things that happen throughout the game
+        custom fare hike, leaves you with 95% of your money
+        search and seizre, you lose 100$
+        feeling the pressure, lose 100
+        you got jumped, lose 50
+
+      when a new agent is created they start with 0 inventory and 1000$
+
+      user is prompted for name and code name
+
+      buy item function so that the item and its qty is pushed to your inventory
+
+      sell item functin so that the item and its qty is removed from inventory
+        if you try to sell more than you have a flag goes up
+        or if the item isn't found, throw an error
+
+      ranks - as your money goes up for down your rank changes
+
+      canafford is a funtion to see if you can afford things (buying)
+      spendmoney is a function for when you spend money the money is decreased from bank
+      earnmoney is a function for when you sell items the moeny is incerased in bank
+
+      
+
+
+
+
+
+
         
 
 
